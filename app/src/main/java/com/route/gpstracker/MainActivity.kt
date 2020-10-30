@@ -256,4 +256,9 @@ class MainActivity : BaseActivity(),OnMapReadyCallback {
 
     }
 
+    override fun onStop() {
+        super.onStop()
+        fusedLocationClient.removeLocationUpdates(locationCallback)
+    }
+
 }
